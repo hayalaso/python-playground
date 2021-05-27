@@ -33,9 +33,9 @@ h_rocket = 300e3
 earth = sphere(pos=vector(0,0,0),radius=R_earth,texture=textures.earth)
 rocket = sphere(pos=vector(R_earth+h_rocket,0,0),radius=R_earth/40.,color=color.red,make_trail=True)
 
-v0 = 0.995*sqrt(G*M_earth/(R_earth+h_rocket))
+v0 = 0.999*sqrt(G*M_earth/(R_earth+h_rocket))
 rocket.m = m_rocket
-rocket.p = rocket.m*vector(0,v0,0)
+rocket.p = rocket.m*vector(0,0,v0)
 
 t=0.
 dt=1.0 #sec
